@@ -1,86 +1,30 @@
-const { colors } = require('tailwindcss/defaultTheme')
-
 module.exports = {
+  purge: ["./src/**/*.css", "./**/*.html"],
+  darkMode: false, // or 'media' or 'class'
   theme: {
-    screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      'print': {'raw': 'print'},
+    colors: {
+      "day-green": "#B7FEB9",
+      "night-green": "#1BFF37",
+      "day-teal": "#A8FEFF",
+      "night-teal": "#12FFFF",
+      "day-pink": "#FEB1FE",
+      "night-pink": "#FF31FF",
+      blackish: "#080F0F",
+      "day-gray": "#E9EAEB",
+      "night-gray": "#646568",
+      "link-blue": "#4169E1",
     },
     fontFamily: {
-      sans: [
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        '"Noto Sans"',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
-      ],
-      serif: [
-        'Georgia',
-        'Cambria',
-        '"Times New Roman"',
-        'Times',
-        'serif',
-      ],
-      mono: [
-        'Menlo',
-        'Monaco',
-        'Consolas',
-        '"Liberation Mono"',
-        '"Courier New"',
-        'monospace',
-      ],
+      sans: ["'Space Grotesk'"],
     },
-    fontSize: {
-      xs: '0.75rem',
-      sm: '0.875rem',
-      base: '1rem',
-      lg: '1.125rem',
-      xl: '1.25rem',
-      '2xl': '1.5rem',
-      '3xl': '1.875rem',
-      '4xl': '2.25rem',
-      '5xl': '3rem',
-      '6xl': '4rem',
+    extend: {
+      animation: {
+        "spin-slow": "spin 60s linear infinite",
+      },
     },
-    colors: {
-      // theme colors
-      primary: {
-        lt: colors.blue[300],
-        md: colors.blue[500],
-        dk: colors.blue[700],
-      },
-      // shades of gray
-      silver: {
-        lt: colors.gray[100],
-        md: colors.gray[200],
-        dk: colors.gray[300],
-      },
-      slate: {
-        lt: colors.gray[400],
-        md: colors.gray[500],
-        dk: colors.gray[600],
-      },
-      charcoal: {
-        lt: colors.gray[700],
-        md: colors.gray[800],
-        dk: colors.gray[900],
-      },
-      // bw
-      'black': '#000',
-      'white': '#fff',
-    },
+  },
+  variants: {
     extend: {},
   },
-  variants: {},
   plugins: [],
 }

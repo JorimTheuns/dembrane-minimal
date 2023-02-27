@@ -1,63 +1,65 @@
-# Tailwind Boilerplate
+# Tailwind CSS Boilerplate
 
-A barebones but configurable starter project for playing around with Tailwind in a proper PostCSS environment. Forked from https://github.com/tailwindcss/playground.
+Tailwind CSS boilerplate for HTML projects. Bare-bones HTML starter template with Tailwind CSS, PostCSS, Gulp, Browsersync &amp; Imagemin.
 
-Changes include:
-- stripped down the playground homepage for getting started quickly
-- imported `base.css` and `custom.css` files for adding custom styles with @apply
-- font family, text sizes, and screens ready to be configured in `tailwind.config.js`
-- replaced color palette with theme-ready lt/md/dk colors
-- moved CSS files into `/css` folder
-- added screen for print styles
-- reorganized serve and build tasks
-- implemented custom CSS linting with Stylelint
+The main purpose of this boilerplate is to simplify the configuration of Tailwind CSS for beginners.
 
-To get started:
+## How to use this Tailwind CSS Boilerplate
 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/dylanized/tailwind-minimal.git tailwind-minimal
+    git clone git@github.com:salttechno/tailwindcss-boilerplate.git <YOUR_PROJECT_NAME>
 
-    cd tailwindcss-playground
+    cd <YOUR_PROJECT_NAME>
     ```
+
+    Or else simply download boilerplate's zip file from [this link](https://github.com/salttechno/tailwindcss-boilerplate).
 
 2. Install the dependencies:
 
     ```bash
-    # Using npm
+    # if you are using npm
     npm install
 
-    # Using Yarn
+    # OR if you are using Yarn
     yarn
     ```
 
 3. Start the development server:
 
     ```bash
-    # Using npm
-    npm run serve
+    # if you are using npm
+    npm run dev
 
-    # Using Yarn
-    yarn run serve
+    # OR if you are using Yarn
+    yarn run dev
     ```
 
-    Now you should be able to see the project running at localhost:8080.
+    Now you should be able to see the project running at [localhost:3000](http://localhost:3000).
 
-4. Open `public/index.html` in your editor and start experimenting!
+4. Open `./index.html` in your editor (VS Code recommended) and start editing!
 
-## Building for production
+## Optimizing for production
 
-Even though this isn't necessarily a starter kit for a proper project, we've included an example of setting up both [Purgecss](https://www.purgecss.com/) and [cssnano](https://cssnano.co/) to optimize your CSS for production.
+Tailwind CSS output needs to be optimized for the production use. The development version for the CSS file is almost 4MB which is not good for production websites. [Read this for more details](https://tailwindcss.com/docs/optimizing-for-production). This boilerplate **helps you generate the production version** of your CSS file easily & quickly.
 
-To build an optimized version of your CSS, simply run:
+We have configured `purge` option for PostCSS & Tailwind CSS. To build optimized version of your custom CSS, simply run:
 
 ```bash
-# Using npm
-npm run production
+# if you are using npm
+npm run build
 
-# Using Yarn
-yarn run production
+# OR if you are using Yarn
+yarn run build
 ```
 
-After that's done, check out `./public/build/tailwind.css` to see the optimized output.
+For optimizing your images, simply run:
+
+```bash
+# if you are using npm
+npm run build-images
+
+# OR if you are using Yarn
+yarn run build-images
+```
