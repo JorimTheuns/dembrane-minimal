@@ -21,7 +21,7 @@ function imageminTask(cb) {
 function browsersyncServe(cb) {
   browserSync.init({
     server: {
-      baseDir: "./",
+      baseDir: "./assets",
     },
   })
   cb()
